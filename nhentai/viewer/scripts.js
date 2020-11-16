@@ -36,7 +36,7 @@ document.getElementById('list').onclick = event => {
 
 document.getElementById('image-container').onclick = event => {
     const width = document.getElementById('image-container').clientWidth;
-    const clickPos = (event.clientX-document.getElementById('list').clientWidth) / width;
+    const clickPos = event.clientX / width;
 
     if (clickPos < 0.5) {
         changePage(currentPage - 1);
