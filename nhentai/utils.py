@@ -9,6 +9,7 @@ import zipfile
 import shutil
 import requests
 import sqlite3
+import urllib.parse
 
 from nhentai import constant
 from nhentai.logger import logger
@@ -73,7 +74,8 @@ def generate_html(output_dir='.', doujinshi_obj=None):
         doujinshi_dir = '.'
 
     file_list = os.listdir(doujinshi_dir)
-    file_list.sort()
+    file_list = list(filter(lambda x:x.split('.')[0].isdigit(), file_list)) # remove non-digit file names
+    file_list.sort(key = lambda x: int(x.split('.')[0])) # sort by num
 
     for image in file_list:
         if not os.path.splitext(image)[1] in ('.jpg', '.png'):
@@ -147,8 +149,7 @@ def generate_main_html(output_dir='./'):
             title = folder.replace('_', ' ')
         else:
             title = 'nHentai HTML Viewer'
-
-        image_html += element.format(FOLDER=folder, IMAGE=image, TITLE=title)
+        image_html += element.format(FOLDER=urllib.parse.quote(folder), IMAGE=image, TITLE=title)
     if image_html == '':
         logger.warning('No index.html found, --gen-main paused.')
         return

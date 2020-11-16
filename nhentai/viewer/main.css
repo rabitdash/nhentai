@@ -42,14 +42,14 @@ blockquote {
 .container {
     display: block;
     clear: both;
-    margin-left: 15rem;
+    /*margin-left: 15rem;*/
     margin-right: 0.5rem;
     margin-bottom: 5px;
     margin-top: 5px;
     padding: 4px;
     border-radius: 9px;
     background-color: #ecf0f1;
-    width: 100% - 15rem;
+    width: 100%;
     max-width: 1500px
 }
 
@@ -152,30 +152,30 @@ blockquote {
   user-select: none;
 }
 
-.sidenav a {
-  background-color: #eee;
-  padding: 5px 0px 5px 15px;
-  text-decoration: none;
-  font-size: 15px;
-  color: #0d0d0d;
-  display: block;
-  text-align: left;
-}
-.sidenav img {
-	width:100%;
-	padding: 0px 5px 0px 5px;
+/*.sidenav a {*/
+/*  background-color: #eee;*/
+/*  padding: 5px 0px 5px 15px;*/
+/*  text-decoration: none;*/
+/*  font-size: 15px;*/
+/*  color: #0d0d0d;*/
+/*  display: block;*/
+/*  text-align: left;*/
+/*}*/
+/*.sidenav img {*/
+/*	width:100%;*/
+/*	padding: 0px 5px 0px 5px;*/
 
-}
+/*}*/
 
-.sidenav h1 {
-    font-size: 1.5em;
-	margin: 0px 0px 10px;
-}
+/*.sidenav h1 {*/
+/*    font-size: 1.5em;*/
+/*	margin: 0px 0px 10px;*/
+/*}*/
 
-.sidenav a:hover {
-  color: white;
-  background-color: #EC2754;
-}
+/*.sidenav a:hover {*/
+/*  color: white;*/
+/*  background-color: #EC2754;*/
+/*}*/
 
 .accordion {
   font-weight: bold;
