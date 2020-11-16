@@ -149,6 +149,7 @@ def generate_main_html(output_dir='./'):
             title = folder.replace('_', ' ')
         else:
             title = 'nHentai HTML Viewer'
+
         image_html += element.format(FOLDER=urllib.parse.quote(folder), IMAGE=image, TITLE=title)
     if image_html == '':
         logger.warning('No index.html found, --gen-main paused.')
