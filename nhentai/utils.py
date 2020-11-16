@@ -239,8 +239,8 @@ an invalid filename.
 
 """
     # maybe you can use `--format` to select a suitable filename
-    valid_chars = "-_.()[] %s%s" % (string.ascii_letters, string.digits)
-    filename = ''.join(c for c in s if c in valid_chars)
+    invalid_chars = set(string.punctuation)-set("-_.()[]")
+    filename = ''.join(c for c in s if c not in invalid_chars)
     if len(filename) > 100:
         filename = filename[:100] + '...]'
 
